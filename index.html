@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱</title>
+    <meta name="description" content="图梦AI 桌面端工具，专为电商卖家和设计师打造。集成AI生图、AI图像工具箱（超高清放大/抠图/光影溶图/精修）、电商产品研究与批量生图。无需配置API，下载即用。">
+    <meta name="keywords" content="AI生图, AI图片生成, 电商主图, AI电商工具, 产品研究, 图梦AI, TuMeng AI, Amazon主图优化, AI批量生图, Flux, Stable Diffusion, ComfyUI, nano bananer生图, gpt-image-2生图, 豆包生图, AI抠图, 图片放大, 线稿生成, AI产品融合, 电商光影溶图, AI商品图, AI修图, AI扩图, 批量生成主图, AI工作流, 电商AI工具, AI绘画, AI图像生成器, 免费AI生图, AI设计工具, 电商美工, 产品精修, 图片高清修复">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="app.png">
+    <link rel="shortcut icon" type="image/png" href="app.png">
+    <link rel="canonical" href="https://ai.tumeng.xyz/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱">
+    <meta property="og:description" content="专注AI生图与电商产品研究。集成AI图像工具箱（超高清放大/抠图/光影溶图/精修），无需配置API下载即用。">
+    <meta property="og:image" content="https://ai.tumeng.xyz/app.png">
+    <meta property="og:url" content="https://ai.tumeng.xyz/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱">
+    <meta name="twitter:description" content="专注AI生图与电商产品研究。集成AI图像工具箱（超高清放大/抠图/光影溶图/精修），无需配置API下载即用。">
+
+    <!-- 结构化数据: 站点名称 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "图梦 AI",
+        "url": "https://ai.tumeng.xyz/"
+    }
+    </script>
+
+    <!-- 结构化数据: 软件应用 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "图梦 AI",
+        "operatingSystem": "Windows 10/11, macOS 11+ (Apple Silicon)",
+        "applicationCategory": "Multimedia",
+        "description": "AI 图像生成工作站 — 从产品分析到批量生图，一站式完成。专为电商卖家打造的 AI 图像工具。",
+        "url": "https://ai.tumeng.xyz/",
+        "offers": {
+            "@type": "Offer",
+            "price": "9.9",
+            "priceCurrency": "CNY",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/OnlineOnly"
+        },
+        "featureList": "AI文生图, AI图生图, 电商产品研究, AI应用, 批量生图"
+    }
+    </script>
+
+    <!-- 结构化数据: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "图梦 AI 需要什么电脑配置？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Windows 10/11 64 位或 macOS 11+（Apple Silicon）均可。不需要独立显卡，所有计算在云端完成。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "图梦 AI 如何收费？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "采用积分制。充值获得积分，每次生图消耗对应积分。新用户注册赠送体验积分。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "图梦 AI 生成的图片版权归谁？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "生成的图片版权归用户所有。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+<!-- ===== 导航栏 ===== -->
+<header id="header">
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">
+                <img src="app.png" alt="" class="logo-icon">
+                图梦 AI
+            </a>
+            <div class="nav-links">
+                <a href="features.html">功能特性</a>
+                <a href="#research">产品研究</a>
+                <a href="#pricing">价格</a>
+                <a href="#download">下载</a>
+                <a href="faq.html">常见问题</a>
+                <a href="https://a.tumeng.xyz/register" class="nav-reg">注册</a>
+                <a href="download.html" class="nav-cta">立即下载</a>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i data-lucide="menu" style="width:24px;height:24px;color:#fff;"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <div class="hero-tag">
+                <i data-lucide="sparkles" style="width:16px;height:16px;"></i>
+                设计师与卖家的 AI 视觉工作站
+            </div>
+            <h1>
+                你的产品，你的创意<br>
+                <span class="gradient-text">AI 帮你一次落地</span>
+            </h1>
+            <p>
+                图梦 AI 是专为设计师和电商卖家打造的桌面端创作工具。<br>
+                从灵感构思到产品主图，覆盖完整视觉工作流，无需配置打开即用。
+            </p>
+            <div class="hero-actions">
+                <a href="download.html" class="btn-primary">
+                    <i data-lucide="rocket" style="width:18px;height:18px;"></i>
+                    免费下载
+                </a>
+                <a href="features.html" class="btn-secondary">
+                    了解功能
+                    <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <span><i data-lucide="monitor" style="width:14px;height:14px;color:var(--accent);"></i> 支持 <strong>Windows / macOS</strong></span>
+                <span><i data-lucide="cpu" style="width:14px;height:14px;color:var(--accent);"></i> 无需 <strong>独立显卡</strong></span>
+                <span><i data-lucide="zap" style="width:14px;height:14px;color:var(--accent);"></i> 开箱 <strong>即用</strong></span>
+            </div>
+        </div>
+        <div class="hero-mockup">
+            <div class="mockup-frame">
+                <div class="mockup-dot">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-screen">
+                    <img src="img/首页.png" alt="图梦 AI 桌面端主界面截图">
+                </div>
+            </div>
+            <!-- 浮动装饰标签 -->
+            <div class="float-badge float-badge-1">
+                <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+                <span>AI 文生图</span>
+            </div>
+            <div class="float-badge float-badge-2">
+                <i data-lucide="workflow" style="width:14px;height:14px;"></i>
+                <span>AI应用</span>
+            </div>
+            <div class="float-badge float-badge-3">
+                <i data-lucide="bar-chart-3" style="width:14px;height:14px;"></i>
+                <span>商品分析</span>
+            </div>
+            <div class="float-badge float-badge-4">
+                <i data-lucide="wand-2" style="width:14px;height:14px;"></i>
+                <span>批量生成</span>
+            </div>
+            <!-- 装饰光晕 -->
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 徽标条 ===== -->
+<div class="logo-bar">
+    <div class="container">
+        <p>已服务于数千电商卖家与创作者</p>
+        <div class="logo-bar-logos">
+            <span>Amazon 卖家</span>
+            <span>跨境电商</span>
+            <span>设计工作室</span>
+            <span>自由创作者</span>
+            <span>电商培训</span>
+        </div>
+    </div>
+
+<!-- ===== 核心功能 ===== -->
+<section id="features" class="features">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="layers" style="width:14px;height:14px;"></i>
+            核心功能
+        </span>
+        <h2 class="section-title reveal">覆盖创作全流程，满足多元需求</h2>
+        <p class="section-desc reveal">从灵感构思到成品输出，图梦 AI 提供完整的 AI 图像创作工具链。</p>
+        <div class="features-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">
+                    <i data-lucide="image-plus" style="width:28px;height:28px;color:var(--accent);"></i>
+                </div>
+                <h3>AI 文生图 / 图生图</h3>
+                <ul>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> Nano Banana Pro</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> Nano Banana 2</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> Nano Banana Lite</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> gpt-image-2</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> seedream-5-0</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 支持 14 种宽高比，4 档分辨率</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 批量生成，不排队</li>
+                </ul>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">
+                    <i data-lucide="workflow" style="width:28px;height:28px;color:var(--accent);"></i>
+                </div>
+                <h3>AI应用</h3>
+                <ul>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 预置多种应用模板</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 产品融合，电商光影融合溶图</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 渲染级产品精修</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 最强图像抠图</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 超高清放大，增加细节</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 图像扩大，替PS扩图</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 线稿图一键生成</li>
+                </ul>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-icon">
+                    <i data-lucide="bar-chart-3" style="width:28px;height:28px;color:var(--accent);"></i>
+                </div>
+                <h3>电商产品研究</h3>
+                <ul>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 上传产品图片等信息</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 自动搜索和筛选Amazon竞品</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> AI 自动分析竞品图片的内容、卖点、构图等</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 智能生成主图优化策略</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 批量生成一套电商主图，电商卖家一键做图</li>
+                </ul>
+            </div>
+            <div class="feature-card reveal reveal-delay-4">
+                <div class="feature-icon">
+                    <i data-lucide="folders" style="width:28px;height:28px;color:var(--accent);"></i>
+                </div>
+                <h3>自动保存，即生即用</h3>
+                <ul>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 生成图片自动保存到本地和云端，双保险</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 支持直接拖动图片到 Photoshop 等编辑软件</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 无需繁琐的下载操作，即生即用</li>
+                    <li><i data-lucide="check" style="width:12px;height:12px;color:var(--accent);flex-shrink:0;"></i> 设计师专属高效AI应用</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 深度区①：AI 文生图 / 图生图 ===== -->
+<section id="ai-gen" class="section-alt">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+            核心能力
+        </span>
+        <h2 class="section-title reveal">先进模型加持，输入即所得</h2>
+        <p class="section-desc reveal">支持 OpenAI、Gemini、Seedream 等主流生成模型，文生图、图生图双模式，覆盖从创意到落地的全场景。</p>
+        <div class="alt-grid">
+            <div class="alt-visual reveal reveal-delay-1">
+                <div class="model-cards">
+                    <div class="model-card">
+                        <div class="model-card-icon grad-1">
+                            <i data-lucide="sparkles" style="width:24px;height:24px;color:var(--accent);"></i>
+                        </div>
+                        <h4>OpenAI</h4>
+                        <span class="model-tagline">最佳通用模型</span>
+                        <p>文生图与图生图综合能力最强，稳定可靠，适合大多数创作场景。</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-card-icon grad-2">
+                            <i data-lucide="brain" style="width:24px;height:24px;color:#a46bfa;"></i>
+                        </div>
+                        <h4>Gemini</h4>
+                        <span class="model-tagline">多模态理解</span>
+                        <p>视觉理解能力强，擅长处理参考图分析、复杂构图理解等任务。</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-card-icon grad-3">
+                            <i data-lucide="palette" style="width:24px;height:24px;color:#5E45FF;"></i>
+                        </div>
+                        <h4>Seedream</h4>
+                        <span class="model-tagline">高品质创意</span>
+                        <p>电商视觉表现突出，细节丰富度高，适合对画质有高要求的场景。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="alt-content">
+                <div class="alt-item reveal reveal-delay-2">
+                    <h4>AI 生图</h4>
+                    <p>输入文字描述或上传参考图，AI 秒级生成对应图像，文生图与图生图双模式覆盖。</p>
+                </div>
+                <div class="alt-item reveal reveal-delay-3">
+                    <h4>主流模型全覆盖</h4>
+                    <p>OpenAI / Gemini / Seedream 等多种模型可选，不同模型各有擅长的风格与场景。</p>
+                </div>
+                <div class="alt-item reveal reveal-delay-4">
+                    <h4>灵活参数控制</h4>
+                    <p>14 种宽高比 · 4 档分辨率 · 一次最多生成 4 张，满足不同平台输出需求。</p>
+                </div>
+            </div>
+        </div>
+        <div class="alt-audience-notes reveal">
+            <p><i data-lucide="info" style="width:14px;height:14px;color:var(--accent);vertical-align:middle;margin-right:6px;"></i>设计师说：生成的图片可直接拖到 Photoshop 中继续编辑，无缝衔接现有工作流。</p>
+            <p><i data-lucide="info" style="width:14px;height:14px;color:var(--accent);vertical-align:middle;margin-right:6px;"></i>卖家说：输入产品关键词快速出图，批量生成主图方案不再需要反复沟通。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 产品研究（差异化卖点） ===== -->
+<section id="research" class="research-section">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="flame" style="width:14px;height:14px;"></i>
+            核心特色
+        </span>
+        <h2 class="section-title reveal">专为电商卖家打造的 AI 产品研究工具</h2>
+        <p class="section-desc reveal">告别手动分析竞品图片，AI 帮你完成从分析到生成的全流程。</p>
+        <div class="research-grid">
+            <div class="research-steps">
+                <div class="research-step reveal reveal-delay-1">
+                    <span class="step-num">
+                        <i data-lucide="upload" style="width:18px;height:18px;"></i>
+                    </span>
+                    <div class="step-content">
+                        <h4>上传产品图片</h4>
+                        <p>拖拽或选择需要优化的产品原始图片，支持常见图片格式。</p>
+                    </div>
+                </div>
+                <div class="research-step reveal reveal-delay-2">
+                    <span class="step-num">
+                        <i data-lucide="file-text" style="width:18px;height:18px;"></i>
+                    </span>
+                    <div class="step-content">
+                        <h4>输入产品卖点</h4>
+                        <p>填写产品的核心卖点与目标用户，AI 据此生成针对性优化策略。</p>
+                    </div>
+                </div>
+                <div class="research-step reveal reveal-delay-3">
+                    <span class="step-num">
+                        <i data-lucide="search" style="width:18px;height:18px;"></i>
+                    </span>
+                    <div class="step-content">
+                        <h4>搜索竞品</h4>
+                        <p>输入 Amazon 关键词，自动抓取竞品商品图片列表。</p>
+                    </div>
+                </div>
+                <div class="research-step reveal reveal-delay-4">
+                    <span class="step-num">
+                        <i data-lucide="brain-circuit" style="width:18px;height:18px;"></i>
+                    </span>
+                    <div class="step-content">
+                        <h4>AI 深度分析</h4>
+                        <p>识别图片类型（白底 / 场景 / 文案等），分析构图、配色、卖点传达。</p>
+                    </div>
+                </div>
+                <div class="research-step reveal reveal-delay-5">
+                    <span class="step-num">
+                        <i data-lucide="wand-2" style="width:18px;height:18px;"></i>
+                    </span>
+                    <div class="step-content">
+                        <h4>批量生成主图</h4>
+                        <p>基于分析结果生成优化主图方案，一键批量渲染多张主图。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="research-right">
+                <div class="comparison-grid">
+                    <div class="comparison-card bad">
+                        <h4>
+                            <i data-lucide="x-circle" style="width:18px;height:18px;color:var(--error);vertical-align:middle;"></i>
+                            传统方式
+                        </h4>
+                        <ul>
+                            <li><i data-lucide="x" style="width:14px;height:14px;color:var(--error);flex-shrink:0;"></i> 手动搜索竞品，效率低</li>
+                            <li><i data-lucide="x" style="width:14px;height:14px;color:var(--error);flex-shrink:0;"></i> 肉眼分析图片，不准确</li>
+                            <li><i data-lucide="x" style="width:14px;height:14px;color:var(--error);flex-shrink:0;"></i> 找设计师作图，成本高</li>
+                            <li><i data-lucide="clock" style="width:14px;height:14px;color:var(--error);flex-shrink:0;"></i> 耗时 2-3 天</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card good">
+                        <h4>
+                            <i data-lucide="check-circle" style="width:18px;height:18px;color:var(--success);vertical-align:middle;"></i>
+                            图梦 AI
+                        </h4>
+                        <ul>
+                            <li><i data-lucide="check" style="width:14px;height:14px;color:var(--success);flex-shrink:0;"></i> AI 自动搜索，秒级完成</li>
+                            <li><i data-lucide="check" style="width:14px;height:14px;color:var(--success);flex-shrink:0;"></i> AI 智能分析，客观准确</li>
+                            <li><i data-lucide="check" style="width:14px;height:14px;color:var(--success);flex-shrink:0;"></i> AI 批量生成，零成本</li>
+                            <li><i data-lucide="clock" style="width:14px;height:14px;color:var(--success);flex-shrink:0;"></i> 全程 10 分钟</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div class="mockup-frame" style="aspect-ratio:16/9;">
+                        <div class="mockup-screen">
+                            <img src="img/研究.png" alt="图梦 AI 产品研究界面">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 深度区③：AI 图像工具箱 ===== -->
+<section id="toolkit" class="section-alt">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="tool" style="width:14px;height:14px;"></i>
+            设计师工具箱
+        </span>
+        <h2 class="section-title reveal">告别多软件切换，一个工具搞定图像处理全流程</h2>
+        <p class="section-desc reveal">放大细节、扩展画布、生成线稿、精修产品、融合光影——日常工作流中最高频的操作，全部集成在图梦 AI 里。</p>
+        <div class="toolkit-grid">
+            <div class="toolkit-card reveal reveal-delay-1">
+                <div class="toolkit-icon"><i data-lucide="droplets" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>光影融合溶图</h4>
+                <p>电商产品光影融合，多图自然合成，让合成图片的光影统一和谐。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-2">
+                <div class="toolkit-icon"><i data-lucide="gem" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>产品精修</h4>
+                <p>渲染级精修处理，提升产品图的质感、光影和细节表现。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-3">
+                <div class="toolkit-icon"><i data-lucide="zoom-in" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>超高清放大</h4>
+                <p>增加细节的智能放大，最高支持 14 倍，图片清晰度大幅提升。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-4">
+                <div class="toolkit-icon"><i data-lucide="expand" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>图像扩大</h4>
+                <p>AI 智能扩展画布内容，替代 PS 内容识别填充，扩图自然无痕。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-5">
+                <div class="toolkit-icon"><i data-lucide="wand-2" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>AI 抠图</h4>
+                <p>智能去背景，快速分离主体。（辅助功能）</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-6">
+                <div class="toolkit-icon"><i data-lucide="pen-tool" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>线稿生成</h4>
+                <p>图片一键转为线稿，适用于电商设计、印刷等场景的线稿需求。</p>
+            </div>
+        </div>
+        <p class="alt-footnote reveal"><i data-lucide="info" style="width:14px;height:14px;color:var(--accent);vertical-align:middle;margin-right:6px;"></i>所有处理在云端完成，无需高性能显卡，笔记本也能流畅运行。</p>
+    </div>
+</section>
+
+<!-- ===== 深度区④：提示词库 ===== -->
+<section id="prompts" class="section-alt">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="book-open" style="width:14px;height:14px;"></i>
+            高效创作
+        </span>
+        <h2 class="section-title reveal">保存你的灵感，不再重复造轮子</h2>
+        <p class="section-desc reveal">把常用的 prompt 和参数组合分门别类保存，下次创作时一键调用，无需重新输入或翻聊天记录。</p>
+        <div class="alt-grid alt-grid-flip">
+            <div class="alt-visual reveal reveal-delay-1">
+                <div class="prompt-mockup">
+                    <div class="prompt-sidebar">
+                        <div class="prompt-sidebar-item active">全部</div>
+                        <div class="prompt-sidebar-item">未分类</div>
+                        <div class="prompt-sidebar-item">电商主图</div>
+                        <div class="prompt-sidebar-item">产品场景</div>
+                        <div class="prompt-sidebar-item">创意风格</div>
+                        <div class="prompt-sidebar-item">自定义</div>
+                        <div class="prompt-sidebar-item">精选推荐</div>
+                        <div class="prompt-sidebar-add">+ 添加分类</div>
+                    </div>
+                    <div class="prompt-main">
+                        <div class="prompt-toolbar">
+                            <div class="prompt-search-box"><i data-lucide="search" style="width:13px;height:13px;color:var(--text-muted);flex-shrink:0;"></i> 搜索提示词...</div>
+                            <div class="prompt-new-btn">+ 新建</div>
+                        </div>
+                        <div class="prompt-cards">
+                            <div class="prompt-mini-card"><div class="pmc-title">高端护肤品白底图</div><div class="pmc-preview">高端护肤品在白底上拍摄，柔和的影棚光线，干净优雅的呈现效果...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">户外场景登山鞋</div><div class="pmc-preview">登山鞋在山地地形中，戏剧化的自然光线，突出耐用性和抓地力...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">极简家电场景</div><div class="pmc-preview">极简家电在现代厨房环境中，简洁线条，温暖的氛围灯光照明...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">动漫风格人像</div><div class="pmc-preview">动漫风格人像，生动色彩，赛璐珞着色，精致头发和眼睛，柔和虚化背景...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">科技产品场景图</div><div class="pmc-preview">科技产品在未来感工作空间中，霓虹灯光点缀，光滑金属质感反光...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">美食摄影精选</div><div class="pmc-preview">美食摄影在乡村木桌上，温暖的金色时光照明，浅景深效果...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">服装模特试穿</div><div class="pmc-preview">服装模特在简约背景前展示，自然光线，突出面料质感和剪裁细节...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">节日促销海报</div><div class="pmc-preview">节日促销活动海报设计，鲜艳色彩搭配，醒目标题与产品图组合排版...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">室内家居场景</div><div class="pmc-preview">现代简约家居在自然光线下，温暖舒适的氛围，干净整洁的生活空间...</div></div>
+                            <div class="prompt-mini-card"><div class="pmc-title">运动鞋宣传图</div><div class="pmc-preview">运动鞋在动态场景中抓拍，强调速度与活力，鲜艳配色突出品牌调性...</div></div>
+                        </div>
+                        <div class="prompt-status">共 10 条提示词 · 4 个分类</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alt-content">
+                <div class="alt-item reveal reveal-delay-2">
+                    <h4>分类管理</h4>
+                    <p>左侧分类栏自由组织提示词，支持创建、重命名、删除分类，按项目或风格整理。</p>
+                </div>
+                <div class="alt-item reveal reveal-delay-3">
+                    <h4>卡片式展示</h4>
+                    <p>每个提示词一张卡片，标题+内容预览，一目了然，快速找到需要的 prompt。</p>
+                </div>
+                <div class="alt-item reveal reveal-delay-4">
+                    <h4>一键应用</h4>
+                    <p>点击「使用提示词」直接填入生图输入框，不关窗继续创作，打断感降到最低。</p>
+                </div>
+                <div class="alt-item reveal reveal-delay-5">
+                    <h4>即用即改</h4>
+                    <p>内置 8 个精选灵感模板（写实人物、动漫风格、产品展示等），右键即可使用，上手零门槛。</p>
+                </div>
+            </div>
+        </div>
+        <p class="alt-footnote reveal"><i data-lucide="info" style="width:14px;height:14px;color:var(--accent);vertical-align:middle;margin-right:6px;"></i>仅自己可见，隐私安全。适合设计师和卖家各自管理自己的词库。</p>
+    </div>
+</section>
+
+<!-- ===== 积分与价格 ===== -->
+<section id="pricing" class="pricing-section">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="tag" style="width:14px;height:14px;"></i>
+            定价
+        </span>
+        <h2 class="section-title reveal">透明定价，按需使用</h2>
+        <p class="section-desc reveal" style="margin: 0 auto 48px;">充值积分即可使用所有功能，用多少充多少。</p>
+
+        <div class="trial-banner reveal">
+            <div class="trial-banner-left">
+                <div class="trial-banner-icon">
+                    <i data-lucide="gift" style="width:24px;height:24px;color:#fff;"></i>
+                </div>
+                <div class="trial-banner-text">
+                    <h4>新用户注册即送体验积分</h4>
+                    <p>无需付费即可体验 AI 生图、产品研究和全套图像工具箱</p>
+                </div>
+            </div>
+            <a href="https://a.tumeng.xyz/register" class="btn-primary" style="padding:12px 28px;font-size:14px;">
+                免费注册
+                <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            </a>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card reveal reveal-delay-1">
+                <h3>体验包</h3>
+                <div class="pricing-price">¥9.9</div>
+                <div class="pricing-points">基础 <strong>1000</strong> 积分</div>
+                <div class="pricing-gift">—</div>
+                <div class="pricing-total">共 <strong>1000</strong> 积分</div>
+                <div class="pricing-estimate">最多可生成 <strong>100</strong> 张图片</div>
+                <div class="pricing-hint">支持支付宝、卡密充值</div>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <span class="pricing-badge">
+                    <i data-lucide="star" style="width:12px;height:12px;"></i>
+                    推荐
+                </span>
+                <h3>标准包</h3>
+                <div class="pricing-price">¥59.0</div>
+                <div class="pricing-points">基础 <strong>6000</strong> 积分</div>
+                <div class="pricing-gift">
+                    <i data-lucide="gift" style="width:12px;height:12px;"></i>
+                    赠送 <strong>500</strong> 积分
+                </div>
+                <div class="pricing-total">共 <strong>6500</strong> 积分</div>
+                <div class="pricing-estimate">最多可生成 <strong>650</strong> 张图片</div>
+                <div class="pricing-hint">支持支付宝、卡密充值</div>
+            </div>
+            <div class="pricing-card reveal reveal-delay-3">
+                <h3>量大包</h3>
+                <div class="pricing-price">¥199.0</div>
+                <div class="pricing-points">基础 <strong>20000</strong> 积分</div>
+                <div class="pricing-gift">
+                    <i data-lucide="gift" style="width:12px;height:12px;"></i>
+                    赠送 <strong>3000</strong> 积分
+                </div>
+                <div class="pricing-total">共 <strong>23000</strong> 积分</div>
+                <div class="pricing-estimate">最多可生成 <strong>2300</strong> 张图片</div>
+                <div class="pricing-hint">支持支付宝、卡密充值</div>
+            </div>
+            <div class="pricing-card reveal reveal-delay-4">
+                <h3>企业包</h3>
+                <div class="pricing-price">¥499.0</div>
+                <div class="pricing-points">基础 <strong>50000</strong> 积分</div>
+                <div class="pricing-gift">
+                    <i data-lucide="gift" style="width:12px;height:12px;"></i>
+                    赠送 <strong>10000</strong> 积分
+                </div>
+                <div class="pricing-total">共 <strong>60000</strong> 积分</div>
+                <div class="pricing-estimate">最多可生成 <strong>6000</strong> 张图片</div>
+                <div class="pricing-hint">支持支付宝、卡密充值</div>
+            </div>
+        </div>
+        <div class="pricing-note">
+            <i data-lucide="megaphone" style="width:14px;height:14px;color:var(--accent);vertical-align:middle;"></i>
+            <strong>邀请奖励</strong>：邀请好友注册，好友首单生图后双方均获赠积分<br>
+            <span style="font-size:12px;">* 套餐价格和积分为示意，以客户端实际显示为准</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 下载引导 ===== -->
+<section id="download" class="download-cta">
+    <div class="container">
+        <h2 class="reveal">免费体验 AI 图像工作站</h2>
+        <p class="reveal">注册即送积分 · 无需配置 · 解压即用</p>
+        <a href="download.html" class="btn-primary reveal">
+            <i data-lucide="download" style="width:20px;height:20px;"></i>
+            免费下载桌面客户端
+        </a>
+        <div class="cta-trust-bar reveal">
+            <span><i data-lucide="monitor" style="width:14px;height:14px;color:var(--accent);"></i> Windows 10/11</span>
+            <span><i data-lucide="monitor" style="width:14px;height:14px;color:var(--accent);"></i> macOS 11+</span>
+            <span><i data-lucide="cpu" style="width:14px;height:14px;color:var(--accent);"></i> 无需独立显卡</span>
+            <span><i data-lucide="zap" style="width:14px;height:14px;color:var(--accent);"></i> 无需配置 API</span>
+        </div>
+        <div class="cta-links reveal">
+            <a href="download.html">已有账号？去登录 <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a>
+            <a href="index.html#faq">遇到问题？查看 FAQ <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq-section">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="circle-help" style="width:14px;height:14px;"></i>
+            FAQ
+        </span>
+        <h2 class="section-title reveal">常见问题</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>图梦 AI 是什么？</summary>
+                <div class="faq-answer">图梦 AI 是一款 AI 图像生成桌面工具，集成了文生图、图生图、AI应用和 Amazon 电商产品研究功能。无需配置 API Key，下载即用。</div>
+            </details>
+            <details class="faq-item">
+                <summary>需要什么电脑配置？</summary>
+                <div class="faq-answer">Windows 10/11 64 位 或 macOS 11+（Apple Silicon）均可运行。<strong>不需要独立显卡</strong>，所有计算在云端完成。需要稳定的网络连接。</div>
+            </details>
+            <details class="faq-item">
+                <summary>如何收费？</summary>
+                <div class="faq-answer">采用积分制。充值获得积分，每次生图消耗对应积分。新用户注册赠送体验积分。具体价格请下载客户端查看。</div>
+            </details>
+            <details class="faq-item">
+                <summary>不会用怎么办？</summary>
+                <div class="faq-answer">客户端界面简洁直观，输入文字即可生成图片。联系客服可获取使用指导。</div>
+            </details>
+            <details class="faq-item">
+                <summary>生成的图片版权归谁？</summary>
+                <div class="faq-answer">你生成的图片版权归你所有。</div>
+            </details>
+            <details class="faq-item">
+                <summary>如何联系客服？</summary>
+                <div class="faq-answer">客户端内有联系客服页面，可通过在线留言或扫描 QQ/微信二维码联系我们。</div>
+            </details>
+            <details class="faq-item">
+                <summary>这个工具对设计师有什么用？</summary>
+                <div class="faq-answer">图梦 AI 提供超高清放大、图像扩展、线稿生成、产品精修、光影融合等工具，覆盖设计师日常高频操作。所有处理在云端完成，笔记本也能流畅运行。生成的图片可直接拖到 Photoshop 等软件继续编辑。</div>
+            </details>
+            <details class="faq-item">
+                <summary>生成的图片精度够用吗？</summary>
+                <div class="faq-answer">支持最高 4K 分辨率输出，满足电商主图、印刷品、社交媒体等场景需求。超高清放大功能最高可提升 14 倍分辨率并增加细节。</div>
+            </details>
+            <details class="faq-item">
+                <summary>提示词库怎么用？</summary>
+                <div class="faq-answer">在生成页右下角点击「提示词库」按钮打开管理弹窗。左侧分类栏组织 prompt，右侧卡片网格展示所有保存的提示词。点击「使用提示词」自动填入生图输入框，无需重新输入。支持创建自定义分类、收藏常用 prompt、右键管理分类。</div>
+            </details>
+            <details class="faq-item">
+                <summary>不会写 prompt 怎么办？</summary>
+                <div class="faq-answer">客户端内置了 8 个精选灵感模板（写实人物、动漫风格、科幻场景、产品展示等），在输入框右键即可使用。你也可以在提示词库中保存自己调试好的 prompt，随时调用。</div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-logo">图梦 AI</div>
+        <div class="footer-desc">AI 图像生成工作站</div>
+        <div class="footer-links">
+            <a href="features.html">功能特性</a>
+            <a href="#research">产品研究</a>
+            <a href="#pricing">价格</a>
+            <a href="#download">下载</a>
+            <a href="faq.html">常见问题</a>
+        </div>
+        <div class="footer-copy">© 2026 图梦 AI · All Rights Reserved · v2.0 · Studio</div>
+    </div>
+</footer>
+
+<!-- ===== 返回顶部 ===== -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i data-lucide="chevron-up" style="width:20px;height:20px;"></i>
+</button>
+
+<!-- ===== Lucide Icons CDN ===== -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- ===== JS ===== -->
+<script>
+// 初始化 Lucide 图标
+lucide.createIcons();
+
+// 滚动入场动画 (IntersectionObserver)
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+});
+
+// 导航栏滚动效果
+window.addEventListener('scroll', function() {
+    var h = document.getElementById('header');
+    if (window.scrollY > 80) { h.classList.add('scrolled'); }
+    else { h.classList.remove('scrolled'); }
+    var btn = document.getElementById('backToTop');
+    if (window.scrollY > 600) { btn.classList.add('visible'); }
+    else { btn.classList.remove('visible'); }
+});
+
+// 移动端汉堡菜单
+function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// 点击导航链接后在移动端自动关闭菜单
+document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.nav-links').style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>
