@@ -1,0 +1,5 @@
+name = "crimson-dawn-d379"
+compatibility_date = "2026-08-13"
+
+[assets]
+directory = "."
