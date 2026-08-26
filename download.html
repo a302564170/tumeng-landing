@@ -299,13 +299,12 @@
 
         // 移动端汉堡菜单
         function toggleMenu() {
-            var nav = document.querySelector('.nav-links');
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            document.querySelector('.nav-links').classList.toggle('open');
         }
         document.querySelectorAll('.nav-links a').forEach(function(a) {
             a.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
-                    document.querySelector('.nav-links').style.display = 'none';
+                    document.querySelector('.nav-links').classList.remove('open');
                 }
             });
         });
