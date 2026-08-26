@@ -1323,7 +1323,7 @@ footer {
     top: 72px;
     right: 12px;
     left: auto;
-    width: min(260px, 80%);
+    width: min(200px, 70%);
     background: var(--bg-nav);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
