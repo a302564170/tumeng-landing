@@ -1324,15 +1324,16 @@ footer {
     right: 12px;
     left: auto;
     width: min(200px, 70%);
-    background: var(--bg-nav);
+    background: var(--bg-card);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 14px 16px;
     gap: 14px;
     align-items: stretch;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border);
     border-top: none;
     border-radius: 0 0 12px 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
     z-index: 999;
   }
   .hero { padding: 100px 0 60px; }
