@@ -1096,7 +1096,8 @@ footer {
   grid-template-columns: 1fr 1fr;
   /* 两行等分左栏剩余高度，卡片外框随截图高度拉伸，避免底部对齐后上方空一块 */
   grid-template-rows: 1fr 1fr;
-  gap: 16px;
+  column-gap: 28px;
+  row-gap: 100px;
   flex: 1;
 }
 /* 这里的卡片比工具箱区块的更紧凑：内边距、图标、字号都收小 */
