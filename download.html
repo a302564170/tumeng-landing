@@ -35,17 +35,14 @@
     }
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/style.css?v=12">
     <style>
         /* ===== 下载页专用样式 ===== */
         .download-hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
+            overflow: clip;
         }
         .download-hero::before {
             content: '';
@@ -157,7 +154,7 @@
             background: #1a1b26;
             border: 1px solid #2a2b3d;
             border-radius: 16px;
-            padding: 32px 28px;
+            padding: 32px 20px 24px;
             text-align: center;
             margin-bottom: 32px;
             transition: all 0.3s ease;
@@ -189,30 +186,81 @@
         }
         .plugin-head .ver { font-size: 12px; color: #5a5b66; }
         .dl-hint a { color: #727ff7; text-decoration: underline; }
+        .install-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            text-align: left;
+        }
+        .install-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid #2a2b3d;
+            border-radius: 14px;
+            padding: 22px 18px 20px;
+        }
+        .install-card.featured {
+            border-color: rgba(114,127,247,0.45);
+            background: rgba(114,127,247,0.06);
+        }
+        .install-tag {
+            position: absolute;
+            top: -10px;
+            left: 18px;
+            padding: 2px 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #727ff7, #a46bfa);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .install-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
         .plugin-steps {
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px 24px;
-            margin: 20px 0 0;
+            margin: 0 0 18px;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             font-size: 12px;
+            line-height: 1.65;
             color: #8b8d92;
         }
-        .plugin-steps li { display: inline-flex; align-items: center; gap: 6px; }
+        .plugin-steps li { display: flex; align-items: flex-start; gap: 8px; }
         .plugin-steps span {
+            flex-shrink: 0;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 18px;
             height: 18px;
+            margin-top: 1px;
             border-radius: 50%;
             background: rgba(114,127,247,0.15);
             color: #727ff7;
             font-size: 11px;
             font-weight: 600;
         }
+        .install-card .dl-btn {
+            margin-top: auto;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 14px;
+        }
+        .install-card .dl-btn.ghost {
+            background: transparent;
+            border: 1px solid rgba(114,127,247,0.5);
+            color: #a9b0ff;
+        }
+        .install-card .dl-btn.ghost:hover { background: rgba(114,127,247,0.1); opacity: 1; }
         .plugin-note {
             margin-top: 18px;
             font-size: 12px;
@@ -247,6 +295,7 @@
         .other-links a:hover { text-decoration: underline; }
         @media (max-width: 640px) {
             .platform-grid { grid-template-columns: 1fr; }
+            .install-grid { grid-template-columns: 1fr; }
             .download-wrap h1 { font-size: 28px; }
         }
     </style>
@@ -323,17 +372,35 @@
                         <p class="ver">支持 Windows 10/11 · Photoshop 2020 及以上（含 2026）</p>
                     </div>
                 </div>
-                <a href="https://dl.tumeng.xyz/download/TuMengAI-CEP-setup.exe" class="dl-btn">
-                    <i data-lucide="download" style="width:16px;height:16px;"></i>
-                    下载 PS 插件（一键安装）
-                </a>
-                <p class="dl-hint">约 220KB · 无需解压 · 装完重启 PS 即可用<br>装不上？<a href="https://dl.tumeng.xyz/download/TuMengAI-CEP.zip">下载 ZIP 版手动安装</a></p>
-                <ol class="plugin-steps">
-                    <li><span>1</span>运行安装程序（无需管理员权限）</li>
-                    <li><span>2</span>完全退出并重启 Photoshop</li>
-                    <li><span>3</span>菜单「窗口 &gt; 扩展(旧版) &gt; 图梦AI」</li>
-                </ol>
-                <p class="plugin-note">用桌面端同一个账号登录，积分、提示词库和图片历史互通。<br>若 Windows 弹出安全提示，点「更多信息 → 仍要运行」；也可以下载 ZIP 版解压后双击 install.bat 手动安装。</p>
+                <div class="install-grid">
+                    <div class="install-card featured">
+                        <div class="install-tag">推荐</div>
+                        <h4>方式一：一键安装</h4>
+                        <ol class="plugin-steps">
+                            <li><span>1</span>下载并双击运行 setup.exe（约 220KB，无需解压、无需管理员权限；没权限时自动装到当前用户目录）</li>
+                            <li><span>2</span>完全退出并重启 Photoshop</li>
+                            <li><span>3</span>菜单「窗口 &gt; 扩展(旧版) &gt; 图梦AI」打开面板</li>
+                        </ol>
+                        <a href="https://dl.tumeng.xyz/download/TuMengAI-CEP-setup.exe" class="dl-btn">
+                            <i data-lucide="download" style="width:16px;height:16px;"></i>
+                            下载一键安装版
+                        </a>
+                    </div>
+                    <div class="install-card">
+                        <h4>方式二：ZIP 手动安装</h4>
+                        <ol class="plugin-steps">
+                            <li><span>1</span>下载 ZIP（约 66KB）并解压到任意文件夹</li>
+                            <li><span>2</span>双击文件夹里的 install.bat（自动复制到 CEP 扩展目录并开启调试模式）</li>
+                            <li><span>3</span>完全退出并重启 Photoshop</li>
+                            <li><span>4</span>菜单「窗口 &gt; 扩展(旧版) &gt; 图梦AI」打开面板</li>
+                        </ol>
+                        <a href="https://dl.tumeng.xyz/download/TuMengAI-CEP.zip" class="dl-btn ghost">
+                            <i data-lucide="folder-down" style="width:16px;height:16px;"></i>
+                            下载 ZIP 版
+                        </a>
+                    </div>
+                </div>
+                <p class="plugin-note">两种方式安装效果完全一样，用桌面端同一个账号登录，积分、提示词库和图片历史互通。<br>若 Windows 弹出安全提示，点「更多信息 → 仍要运行」即可。</p>
             </div>
 
             <div class="reqs-bar">

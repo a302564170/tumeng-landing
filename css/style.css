@@ -164,7 +164,10 @@ nav {
   display: flex;
   align-items: center;
   position: relative;
+  /* clip 不产生滚动容器：装饰元素溢出若用 hidden，浏览器滚动锚定会把容器内部滚走，
+     内容被顶出视口后滚轮无法滚回，只能刷新 */
   overflow: hidden;
+  overflow: clip;
   padding: 140px 0 100px;
 }
 /* 背景装饰 */
@@ -1147,7 +1150,9 @@ footer {
   background: linear-gradient(135deg, #1a1b2e, #24253a);
   border: 1px solid var(--border);
   border-radius: 16px;
+  /* 同 .hero：固定高度的 mockup 内部内容偏高，用 hidden 有被滚走的风险 */
   overflow: hidden;
+  overflow: clip;
   box-shadow: 0 24px 80px rgba(0,0,0,0.5);
   width: 100%;
   max-width: 700px;
