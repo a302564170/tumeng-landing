@@ -1081,7 +1081,7 @@ footer {
 /* ===== Photoshop 插件 ===== */
 .ps-plugin-grid {
   display: grid;
-  grid-template-columns: 1fr 330px;
+  grid-template-columns: 1fr 310px;
   gap: 60px;
   /* 用默认 stretch：左栏撑满到与右侧截图等高，两栏上下边都齐平 */
   align-items: stretch;
@@ -1097,7 +1097,7 @@ footer {
   /* 两行等分左栏剩余高度，卡片外框随截图高度拉伸，避免底部对齐后上方空一块 */
   grid-template-rows: 1fr 1fr;
   column-gap: 28px;
-  row-gap: 100px;
+  row-gap: 48px;
   flex: 1;
 }
 /* 这里的卡片比工具箱区块的更紧凑：内边距、图标、字号都收小 */
@@ -1122,7 +1122,7 @@ footer {
   line-height: 1.6;
 }
 .ps-panel-frame {
-  max-width: 330px;
+  max-width: 310px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
