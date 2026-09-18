@@ -32,7 +32,7 @@
   /* 尺寸 */
   --card-radius: 16px;
   --btn-radius: 10px;
-  --section-padding: 100px;
+  --section-padding: 72px;
 }
 
 /* ===== Reset ===== */
@@ -1081,10 +1081,15 @@ footer {
 /* ===== Photoshop 插件 ===== */
 .ps-plugin-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 285px;
   gap: 60px;
-  align-items: center;
-  margin-top: 48px;
+  /* 两栏底部对齐：左栏（4 张卡片 + 下载按钮）底边与右侧截图底边齐平 */
+  align-items: end;
+  margin-top: 40px;
+}
+.ps-plugin-left {
+  display: flex;
+  flex-direction: column;
 }
 .ps-plugin-cards {
   display: grid;
@@ -1092,7 +1097,7 @@ footer {
   gap: 20px;
 }
 .ps-panel-frame {
-  max-width: 320px;
+  max-width: 285px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1103,14 +1108,8 @@ footer {
   box-shadow: 0 24px 60px rgba(0,0,0,0.45);
 }
 .ps-panel-frame img { display: block; width: 100%; height: auto; }
-.ps-panel-caption {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-muted);
-}
 .ps-plugin-cta {
-  margin-top: 40px;
+  margin-top: 24px;
   text-align: center;
 }
 .ps-plugin-note {
@@ -1362,7 +1361,7 @@ footer {
   .trial-banner-left { flex-direction: column; text-align: center; }
 }
 @media (max-width: 768px) {
-  :root { --section-padding: 60px; }
+  :root { --section-padding: 48px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
