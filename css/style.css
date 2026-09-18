@@ -1086,6 +1086,11 @@ footer {
   align-items: center;
   margin-top: 48px;
 }
+.ps-plugin-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 .ps-panel-frame {
   max-width: 320px;
   margin: 0 auto;
@@ -1392,6 +1397,7 @@ footer {
   .section-title { font-size: 28px; }
   .alt-grid { grid-template-columns: 1fr; gap: 32px; }
   .toolkit-grid { grid-template-columns: 1fr; }
+  .ps-plugin-cards { grid-template-columns: 1fr; }
   .model-cards { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .prompt-mockup { height: 380px; max-width: none; }
   .prompt-sidebar { width: 100px; min-width: 100px; padding: 12px 8px; }
