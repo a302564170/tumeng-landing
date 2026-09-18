@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下载 · 图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱</title>
-    <meta name="description" content="下载图梦AI 桌面客户端，支持Windows 10/11和macOS（Apple Silicon）。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究。无需配置，下载即用。">
+    <title>下载 · 图梦AI - 桌面客户端 + Photoshop 插件，AI生图·电商产品研究一键做图</title>
+    <meta name="description" content="下载图梦AI 桌面客户端（Windows/macOS）与 Photoshop 插件（CEP 版，支持 PS 2020+）。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究，无需配置，下载即用。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://ai.tumeng.xyz/favicon.ico">
@@ -14,16 +14,16 @@
     <link rel="canonical" href="https://ai.tumeng.xyz/download.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="下载 · 图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱">
-    <meta property="og:description" content="下载图梦AI 桌面客户端。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究。无需配置，下载即用。">
+    <meta property="og:title" content="下载 · 图梦AI - 桌面客户端 + Photoshop 插件，AI生图·电商产品研究一键做图">
+    <meta property="og:description" content="下载图梦AI 桌面客户端与 Photoshop 插件。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究，无需配置，下载即用。">
     <meta property="og:url" content="https://ai.tumeng.xyz/download.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="下载 · 图梦AI - AI生图·电商产品研究一键做图·设计师AI工具箱">
-    <meta name="twitter:description" content="下载图梦AI 桌面客户端。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究。无需配置，下载即用。">
+    <meta name="twitter:title" content="下载 · 图梦AI - 桌面客户端 + Photoshop 插件，AI生图·电商产品研究一键做图">
+    <meta name="twitter:description" content="下载图梦AI 桌面客户端与 Photoshop 插件。集成AI生图、AI工具箱（超高清放大/抠图/溶图/精修）、电商产品研究，无需配置，下载即用。">
 
     <!-- 结构化数据: 站点名称 -->
     <script type="application/ld+json">
@@ -35,7 +35,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=11">
     <style>
         /* ===== 下载页专用样式 ===== */
         .download-hero {
@@ -130,7 +130,7 @@
             color: #5a5b66;
             margin-bottom: 20px;
         }
-        .platform-card .dl-btn {
+        .dl-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -145,11 +145,79 @@
             text-decoration: none;
             transition: opacity 0.2s;
         }
-        .platform-card .dl-btn:hover { opacity: 0.85; }
-        .platform-card .dl-hint {
+        .dl-btn:hover { opacity: 0.85; }
+        .dl-hint {
             font-size: 11px;
             color: #5a5b66;
             margin-top: 8px;
+            line-height: 1.8;
+        }
+        /* ===== Photoshop 插件区块 ===== */
+        .plugin-block {
+            background: #1a1b26;
+            border: 1px solid #2a2b3d;
+            border-radius: 16px;
+            padding: 32px 28px;
+            text-align: center;
+            margin-bottom: 32px;
+            transition: all 0.3s ease;
+        }
+        .plugin-block:hover { border-color: #727ff7; }
+        .plugin-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .plugin-head .icon-wrap {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            background: rgba(114,127,247,0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .plugin-head-text { text-align: left; }
+        .plugin-head h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .plugin-head .ver { font-size: 12px; color: #5a5b66; }
+        .dl-hint a { color: #727ff7; text-decoration: underline; }
+        .plugin-steps {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 24px;
+            margin: 20px 0 0;
+            padding: 0;
+            font-size: 12px;
+            color: #8b8d92;
+        }
+        .plugin-steps li { display: inline-flex; align-items: center; gap: 6px; }
+        .plugin-steps span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgba(114,127,247,0.15);
+            color: #727ff7;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .plugin-note {
+            margin-top: 18px;
+            font-size: 12px;
+            line-height: 1.8;
+            color: #5a5b66;
         }
         .reqs-bar {
             display: flex;
@@ -195,6 +263,7 @@
                 <div class="nav-links">
                     <a href="index.html#features">功能特性</a>
                     <a href="index.html#research">产品研究</a>
+                    <a href="index.html#ps-plugin">PS插件</a>
                     <a href="index.html#pricing">价格</a>
                     <a href="download.html">下载</a>
                     <a href="index.html#faq">常见问题</a>
@@ -241,6 +310,30 @@
                     </a>
                     <p class="dl-hint">约 160MB · 解压即用</p>
                 </div>
+            </div>
+
+            <!-- Photoshop 插件 -->
+            <div class="plugin-block" id="ps">
+                <div class="plugin-head">
+                    <div class="icon-wrap">
+                        <i data-lucide="puzzle" style="width:28px;height:28px;color:#727ff7;"></i>
+                    </div>
+                    <div class="plugin-head-text">
+                        <h3>Photoshop 插件（CEP 版）</h3>
+                        <p class="ver">支持 Windows 10/11 · Photoshop 2020 及以上（含 2026）</p>
+                    </div>
+                </div>
+                <a href="https://dl.tumeng.xyz/download/TuMengAI-CEP-setup.exe" class="dl-btn">
+                    <i data-lucide="download" style="width:16px;height:16px;"></i>
+                    下载 PS 插件（一键安装）
+                </a>
+                <p class="dl-hint">约 220KB · 无需解压 · 装完重启 PS 即可用<br>装不上？<a href="https://dl.tumeng.xyz/download/TuMengAI-CEP.zip">下载 ZIP 版手动安装</a></p>
+                <ol class="plugin-steps">
+                    <li><span>1</span>运行安装程序（无需管理员权限）</li>
+                    <li><span>2</span>完全退出并重启 Photoshop</li>
+                    <li><span>3</span>菜单「窗口 &gt; 扩展(旧版) &gt; 图梦AI」</li>
+                </ol>
+                <p class="plugin-note">用桌面端同一个账号登录，积分、提示词库和图片历史互通。<br>若 Windows 弹出安全提示，点「更多信息 → 仍要运行」；也可以下载 ZIP 版解压后双击 install.bat 手动安装。</p>
             </div>
 
             <div class="reqs-bar">

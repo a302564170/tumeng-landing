@@ -38,6 +38,8 @@
 /* ===== Reset ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* 固定导航高 72px，锚点跳转时留出空间，避免标题被顶栏遮住 */
+[id] { scroll-margin-top: 84px; }
 body {
   font-family: "Inter", "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   background: var(--bg-primary);
@@ -1071,6 +1073,17 @@ footer {
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+/* ===== Photoshop 插件 ===== */
+.ps-plugin-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+.ps-plugin-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
 /* ===== 模型卡片（替代截图） ===== */

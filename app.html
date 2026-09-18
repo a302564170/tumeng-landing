@@ -86,12 +86,28 @@
                     "@type": "Answer",
                     "text": "生成的图片版权归用户所有。"
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Photoshop 插件怎么安装？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "在下载页下载 PS 插件安装包（约 220KB），双击运行即可，无需解压、也不需要管理员权限；安装完成后完全退出并重启 Photoshop，在菜单「窗口 > 扩展(旧版)」中打开图梦 AI 面板。若被系统拦截，可下载 ZIP 版手动安装：解压后双击 install.bat。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "PS 插件支持哪些版本？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持 Windows 10/11 系统上的 Photoshop 2020 及以上版本（含 2026）。插件与桌面端共用同一账号与积分，无需单独注册或充值；Mac 版正在开发中。"
+                }
             }
         ]
     }
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
@@ -106,6 +122,7 @@
             <div class="nav-links">
                 <a href="features.html">功能特性</a>
                 <a href="#research">产品研究</a>
+                <a href="#ps-plugin">PS插件</a>
                 <a href="#pricing">价格</a>
                 <a href="#download">下载</a>
                 <a href="faq.html">常见问题</a>
@@ -533,6 +550,42 @@
     </div>
 </section>
 
+<!-- ===== 深度区⑤：Photoshop 插件 ===== -->
+<section id="ps-plugin" class="section-alt">
+    <div class="container">
+        <span class="section-label">
+            <i data-lucide="puzzle" style="width:14px;height:14px;"></i>
+            Photoshop 插件
+        </span>
+        <h2 class="section-title reveal">不用切软件，在 Photoshop 里直接生图</h2>
+        <p class="section-desc reveal">装上图梦 AI 的 PS 插件，在面板里输入提示词就能生成图片，结果一键置入当前画布并自动适配尺寸，与桌面端共用同一账号和积分。</p>
+        <div class="toolkit-grid">
+            <div class="toolkit-card reveal reveal-delay-1">
+                <div class="toolkit-icon"><i data-lucide="panel-top" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>面板内直接生图</h4>
+                <p>提示词、模型、尺寸都在 PS 面板里选，生成图片不用在软件之间来回切换。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-2">
+                <div class="toolkit-icon"><i data-lucide="layout-dashboard" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>生成即入稿</h4>
+                <p>结果一键置入当前画布，按画板尺寸自动缩放，省掉手动拖拽和反复调整。</p>
+            </div>
+            <div class="toolkit-card reveal reveal-delay-3">
+                <div class="toolkit-icon"><i data-lucide="user-check" style="width:24px;height:24px;color:var(--accent);"></i></div>
+                <h4>同一账号 · 同一积分</h4>
+                <p>和桌面端共用账号、积分与提示词库，图片历史也在，无需另外注册或充值。</p>
+            </div>
+        </div>
+        <div class="ps-plugin-cta reveal">
+            <a href="download.html#ps" class="btn-primary">
+                <i data-lucide="download" style="width:18px;height:18px;"></i>
+                下载 PS 插件
+            </a>
+            <p class="ps-plugin-note">支持 Windows 10/11 · Photoshop 2020 及以上（含 2026） · 安装包仅 220KB，装完重启 PS 即可使用</p>
+        </div>
+    </div>
+</section>
+
 <!-- ===== 积分与价格 ===== -->
 <section id="pricing" class="pricing-section">
     <div class="container">
@@ -634,6 +687,7 @@
             <span><i data-lucide="zap" style="width:14px;height:14px;color:var(--accent);"></i> 无需配置 API</span>
         </div>
         <div class="cta-links reveal">
+            <a href="download.html#ps">或下载 Photoshop 插件 <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a>
             <a href="download.html">已有账号？去登录 <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a>
             <a href="index.html#faq">遇到问题？查看 FAQ <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a>
         </div>
@@ -688,6 +742,14 @@
             <details class="faq-item">
                 <summary>不会写 prompt 怎么办？</summary>
                 <div class="faq-answer">客户端内置了 8 个精选灵感模板（写实人物、动漫风格、科幻场景、产品展示等），在输入框右键即可使用。你也可以在提示词库中保存自己调试好的 prompt，随时调用。</div>
+            </details>
+            <details class="faq-item">
+                <summary>Photoshop 插件怎么安装？</summary>
+                <div class="faq-answer">在<a href="download.html#ps" style="color:var(--accent);">下载页</a>下载 PS 插件安装包（约 220KB），双击运行即可，无需解压、也不需要管理员权限。安装完成后完全退出并重启 Photoshop，在菜单「窗口 &gt; 扩展(旧版)」中打开图梦 AI 面板。如果被系统安全提示拦截，可以改下载 ZIP 版手动安装：解压后双击 install.bat。</div>
+            </details>
+            <details class="faq-item">
+                <summary>PS 插件支持哪些版本？</summary>
+                <div class="faq-answer">支持 Windows 10/11 上的 Photoshop 2020 及以上版本（含 2026）。插件与桌面端共用同一账号与积分，图片历史和提示词库也在，无需单独注册或充值；Mac 版正在开发中。</div>
             </details>
         </div>
     </div>
