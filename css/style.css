@@ -32,7 +32,7 @@
   /* 尺寸 */
   --card-radius: 16px;
   --btn-radius: 10px;
-  --section-padding: 72px;
+  --section-padding: 100px;
 }
 
 /* ===== Reset ===== */
@@ -1081,10 +1081,10 @@ footer {
 /* ===== Photoshop 插件 ===== */
 .ps-plugin-grid {
   display: grid;
-  grid-template-columns: 1fr 285px;
+  grid-template-columns: 1fr 330px;
   gap: 60px;
-  /* 两栏底部对齐：左栏（4 张卡片 + 下载按钮）底边与右侧截图底边齐平 */
-  align-items: end;
+  /* 用默认 stretch：左栏撑满到与右侧截图等高，两栏上下边都齐平 */
+  align-items: stretch;
   margin-top: 40px;
 }
 .ps-plugin-left {
@@ -1094,10 +1094,34 @@ footer {
 .ps-plugin-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  /* 两行等分左栏剩余高度，卡片外框随截图高度拉伸，避免底部对齐后上方空一块 */
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+}
+/* 这里的卡片比工具箱区块的更紧凑：内边距、图标、字号都收小 */
+.ps-plugin-cards .toolkit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 18px;
+}
+.ps-plugin-cards .toolkit-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.ps-plugin-cards .toolkit-icon svg { width: 20px; height: 20px; }
+.ps-plugin-cards .toolkit-card h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.ps-plugin-cards .toolkit-card p {
+  font-size: 12.5px;
+  line-height: 1.6;
 }
 .ps-panel-frame {
-  max-width: 285px;
+  max-width: 330px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1361,7 +1385,7 @@ footer {
   .trial-banner-left { flex-direction: column; text-align: center; }
 }
 @media (max-width: 768px) {
-  :root { --section-padding: 48px; }
+  :root { --section-padding: 60px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
